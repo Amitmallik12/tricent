@@ -46,6 +46,7 @@ Assert.assertEquals("Demo Web Shop. Shopping Cart",driver.getTitle(), "ok");
  WebElement string = cp.getTitle();	
 
 System.out.println("ok:" +string);
+System.out.println("pankaj");
 }
 
 }
