@@ -35,6 +35,8 @@ public class TC001 extends BaseClass {
 		Assert.assertEquals("Demo Web Shp",driver.getTitle(), "title match");
    driver.navigate().forward();
   
+
+    System.out.println("pankaj");
 		
 
 	}
