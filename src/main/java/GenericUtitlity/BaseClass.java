@@ -41,10 +41,7 @@ public class BaseClass {
 
 	public HomePage hp;
 	public LoginPage lp;
-	public Accessoriespage ap;
-	public CartPage cp;
-	public CheckOutPage cop;
-	public RegisterPage rp;
+	
 
 	@BeforeSuite
 	public void extentReport() {
@@ -55,15 +52,6 @@ public class BaseClass {
 		extReport.attachReporter(sparkReporter);
 	}
 
-//	@BeforeClass
-//	public void openBrowser() throws IOException {
-//		driver = new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-//		driver.get(futil.getReadDatafromProperty("url"));
-//	}
-//	
-	
 	@BeforeClass
     public void openBrowser() throws IOException {
         String browser = futil.getReadDatafromProperty("browser");
