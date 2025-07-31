@@ -39,6 +39,7 @@ public class looginPage extends BaseClass {
 	        // Click "Verify & Proceed"
 	        lp.getVerify_submit().click();
 	        System.out.println("Hi");
+	        System.out.println("Kramasya");
 
 	    }
 
