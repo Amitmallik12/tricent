@@ -1,21 +1,22 @@
-package LoginPage;
+package dashboard;
 
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import GenericUtitlity.BaseClass;
-import GenericUtitlity.ListenerUtility;
+import ObjectRepository.BulkOrder;
 import ObjectRepository.LoginPage;
+import ObjectRepository.NewOrderPage;
 
-@Listeners(ListenerUtility.class)
-public class looginPage extends BaseClass {
-  
+public class NeworderPage extends BaseClass {
+	  
 	   @Test 
 	    public void loginFiled() {
 	        lp = new LoginPage(driver);
+	        bo = new BulkOrder(driver);
+	        nop = new NewOrderPage(driver);
 
 	        // Wait for mobile number input to be visible and enter mobile number
 	        WebElement mobileField = wutil.waitForElementToBeVisible(driver, lp.getMobilenumber(), 10);
@@ -38,11 +39,13 @@ public class looginPage extends BaseClass {
 
 	        // Click "Verify & Proceed"
 	        lp.getVerify_submit().click();
-	       
+	        
+	        WebElement icon = wutil.waitForElementToBeVisible(driver, bo.getCreateorder_icon(), 100);
+			icon.click();
 
-	    }
-
-
-	
+	        
+	         nop.enterOrderDeliveryDate("15-08-2025");
+	        
 
 }
+	   }

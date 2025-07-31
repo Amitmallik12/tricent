@@ -18,12 +18,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-import ObjectRepository.Accessoriespage;
-import ObjectRepository.CartPage;
-import ObjectRepository.CheckOutPage;
-import ObjectRepository.HomePage;
+import ObjectRepository.BulkOrder;
 import ObjectRepository.LoginPage;
-import ObjectRepository.RegisterPage;
+import ObjectRepository.NewOrderPage;
 
 public class BaseClass {
 	public static ExtentSparkReporter sparkReporter; // ui of the report
@@ -37,11 +34,12 @@ public class BaseClass {
 	public WebDriverUtility wutil = new WebDriverUtility();
 	public ExcelUtility eutil = new ExcelUtility();
 
-	public Logger logger;
+	public Logger logger; 
 
-	public HomePage hp;
+
 	public LoginPage lp;
-	
+	public BulkOrder bo;
+	public  NewOrderPage nop;
 
 	@BeforeSuite
 	public void extentReport() {
