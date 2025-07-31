@@ -20,6 +20,9 @@ public class looginPage extends BaseClass {
 	lp = new LoginPage(driver);
 	lp.getEmailText().sendKeys(jutil.generateRandomEmail());
 	lp.getPassword().sendKeys(jutil.generateRandomPassword());
+	
+	
+	System.out.println("pankaj latest commit 31 july ");
 
 	
 	
