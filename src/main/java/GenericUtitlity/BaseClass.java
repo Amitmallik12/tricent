@@ -19,8 +19,10 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import ObjectRepository.BulkOrder;
+import ObjectRepository.CreateFilter;
 import ObjectRepository.LoginPage;
 import ObjectRepository.NewOrderPage;
+
 
 public class BaseClass {
 	public static ExtentSparkReporter sparkReporter; // ui of the report
@@ -40,6 +42,10 @@ public class BaseClass {
 	public LoginPage lp;
 	public BulkOrder bo;
 	public  NewOrderPage nop;
+	public CreateFilter cf;
+	
+	
+	
 
 	@BeforeSuite
 	public void extentReport() {
